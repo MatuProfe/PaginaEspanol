@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aprende Español con [Nombre de la Profesora]</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; margin:0; padding:0; font-family:'Montserrat', sans-serif; }
+    body { line-height:1.6; color:#333; scroll-behavior: smooth; }
+    a { text-decoration:none; color:inherit; }
+    
+    /* Navbar */
+    nav {
+      position: sticky;
+      top: 0;
+      background: #FF6B6B;
+      padding: 15px 20px;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      z-index: 1000;
+    }
+    nav a { color: #fff; font-weight:bold; transition:0.3s; }
+    nav a:hover { color:#FFECEC; }
+
+    /* Header/Hero */
+    header {
+      background: #FF6B6B;
+      color: #fff;
+      padding: 100px 20px 60px 20px;
+      text-align: center;
+    }
+    header h1 { font-size:2.5rem; margin-bottom:10px; }
+    header p { font-size:1.2rem; margin-bottom:20px; }
+    .btn { display:inline-block; padding:12px 30px; background:#fff; color:#FF6B6B; border-radius:50px; font-weight:bold; transition:0.3s; }
+    .btn:hover { background:#f0f0f0; }
+
+    section { padding:60px 20px; max-width:1100px; margin:auto; }
+
+    /* About */
+    .about, .services, .testimonials, .contact { text-align:center; }
+    .about img { width:200px; height:200px; border-radius:50%; margin-bottom:20px; }
+
+    /* Services */
+    .services .service-cards { display:flex; flex-wrap:wrap; justify-content:center; gap:20px; margin-top:40px; }
+    .service-card { background:#f8f8f8; padding:20px; flex:1 1 250px; border-radius:10px; text-align:center; }
+    .service-card h3 { margin-bottom:10px; color:#FF6B6B; }
+
+    /* Testimonials */
+    .testimonials .testimonial { background:#FFECEC; padding:20px; margin:10px auto; border-radius:10px; max-width:500px; font-style:italic; }
+
+    /* Contact / Calendly */
+    .contact form { display:flex; flex-direction:column; gap:15px; max-width:500px; margin:auto; }
+    .contact input, .contact textarea { padding:12px; border-radius:5px; border:1px solid #ccc; font-size:1rem; }
+    .contact button { padding:12px; border:none; border-radius:50px; background:#FF6B6B; color:#fff; font-weight:bold; cursor:pointer; transition:0.3s; }
+    .contact button:hover { background:#e05555; }
+
+    footer { text-align:center; padding:20px; background:#f8f8f8; margin-top:40px; }
+
+    @media (max-width:768px) {
+      .services .service-cards { flex-direction:column; }
+      nav { flex-direction: column; gap:10px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav>
+    <a href="#hero">Inicio</a>
+    <a href="#about">Sobre mí</a>
+    <a href="#services">Servicios</a>
+    <a href="#testimonials">Testimonios</a>
+    <a href="#contact">Reserva</a>
+  </nav>
+
+  <!-- Hero Section -->
+  <header id="hero">
+    <h1>Aprende Español de Forma Divertida y Efectiva</h1>
+    <p>Clases personalizadas con [Nombre de la Profesora], para todos los niveles.</p>
+    <a href="#contact" class="btn">Reserva tu clase gratis</a>
+  </header>
+
+  <!-- About Section -->
+  <section class="about" id="about">
+    <img src="https://via.placeholder.com/200" alt="Foto de la profesora">
+    <h2>Sobre mí</h2>
+    <p>Hola, soy [Nombre de la Profesora], nativa de España/Latinoamérica y con [X] años de experiencia enseñando español a estudiantes de todo el mundo. Mis clases son dinámicas, personalizadas y enfocadas en tus objetivos.</p>
+  </section>
+
+  <!-- Services Section -->
+  <section class="services" id="services">
+    <h2>Servicios</h2>
+    <div class="service-cards">
+      <div class="service-card">
+        <h3>Clases Individuales</h3>
+        <p>Aprendizaje personalizado según tu nivel y objetivos.</p>
+      </div>
+      <div class="service-card">
+        <h3>Clases Grupales</h3>
+        <p>Interacción divertida con otros estudiantes en línea.</p>
+      </div>
+      <div class="service-card">
+        <h3>Preparación DELE/SIELE</h3>
+        <p>Preparación completa para exámenes oficiales de español.</p>
+      </div>
+      <div class="service-card">
+        <h3>Clases Online</h3>
+        <p>Aprende desde la comodidad de tu casa, sin límites geográficos.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section class="testimonials" id="testimonials">
+    <h2>Lo que dicen mis estudiantes</h2>
+    <div class="testimonial">
+      “Gracias a [Nombre de la Profesora], ahora hablo español con confianza y fluidez. ¡Sus clases son increíbles!”
+    </div>
+    <div class="testimonial">
+      “Profesora muy paciente y dinámica. Recomiendo totalmente sus clases online.”
+    </div>
+  </section>
+
+  <!-- Contact / Booking Section -->
+  <section class="contact" id="contact">
+    <h2>Reserva tu clase o contáctame</h2>
+
+    <!-- Optional Contact Form -->
+    <form action="#" method="post">
+      <input type="text" name="name" placeholder="Tu nombre" required>
+      <input type="email" name="email" placeholder="Tu correo electrónico" required>
+      <textarea name="message" placeholder="Mensaje" rows="5" required></textarea>
+      <button type="submit">Enviar</button>
+    </form>
+
+    <!-- Calendly Booking Widget -->
+    <div style="margin-top:40px;">
+      <div class="calendly-inline-widget" data-url="https://calendly.com/yourusername" style="min-width:320px;height:630px;"></div>
+      <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 [Nombre de la Profesora]. Todos los derechos reservados.</p>
+  </footer>
+
+</body>
+</html>
